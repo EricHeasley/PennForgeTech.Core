@@ -1,0 +1,3 @@
+[*.cs]
+# Test names use underscores to read as sentences: Method_Scenario_ExpectedOutcome.
+dotnet_diagnostic.CA1707.severity = none

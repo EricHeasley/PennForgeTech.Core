@@ -1,0 +1,38 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.cs]
+# Readability: never use 'var', always spell out the type.
+csharp_style_var_for_built_in_types = false:warning
+csharp_style_var_when_type_is_apparent = false:warning
+csharp_style_var_elsewhere = false:warning
+
+# Always use braces and block bodies.
+csharp_prefer_braces = true:warning
+csharp_style_expression_bodied_methods = false:warning
+csharp_style_expression_bodied_properties = false:warning
+csharp_style_expression_bodied_constructors = false:warning
+
+# Always qualify instance members for clarity.
+dotnet_style_qualification_for_field = true:warning
+dotnet_style_qualification_for_property = true:warning
+dotnet_style_qualification_for_method = true:warning
+
+# Predefined type keywords (string, int) are fine.
+dotnet_style_predefined_type_for_locals_parameters_members = true:warning
+
+# Naming: private fields are _camelCase, interfaces start with I.
+dotnet_naming_rule.private_fields_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_underscore.style = underscore_camel_case
+dotnet_naming_rule.private_fields_underscore.severity = warning
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
