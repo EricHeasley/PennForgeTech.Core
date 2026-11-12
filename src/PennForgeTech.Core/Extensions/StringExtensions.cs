@@ -1,8 +1,10 @@
 using System;
+using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using PennForgeTech.Core.Guards;
 
-namespace PennForgeTech.Core.Utilities
+namespace PennForgeTech.Core.Extensions
 {
     public static class StringExtensions
     {
@@ -22,6 +24,36 @@ namespace PennForgeTech.Core.Utilities
         public static bool EqualsIgnoreCase(this string text, string other)
         {
             return string.Equals(text, other, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public static bool ContainsIgnoreCase(this string text, string value)
+        {
+            Guard.AgainstNull(text, nameof(text));
+            Guard.AgainstNull(value, nameof(value));
+
+            return text.Contains(value, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public static string RemoveWhitespace(this string text)
+        {
+            Guard.AgainstNull(text, nameof(text));
+
+            return new string(text.Where(character => !char.IsWhiteSpace(character)).ToArray());
+        }
+
+        public static bool IsValidEmailAddress(this string text)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return false;
+            }
+
+            if (!MailAddress.TryCreate(text, out MailAddress? address))
+            {
+                return false;
+            }
+
+            return string.Equals(address.Address, text.Trim(), StringComparison.Ordinal);
         }
 
         public static string ToSlug(this string text)

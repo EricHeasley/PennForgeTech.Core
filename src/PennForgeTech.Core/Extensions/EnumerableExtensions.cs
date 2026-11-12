@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using PennForgeTech.Core.Guards;
 
-namespace PennForgeTech.Core.Utilities
+namespace PennForgeTech.Core.Extensions
 {
     public static class EnumerableExtensions
     {
@@ -15,6 +16,31 @@ namespace PennForgeTech.Core.Utilities
             using (IEnumerator<TItem> enumerator = source.GetEnumerator())
             {
                 return !enumerator.MoveNext();
+            }
+        }
+
+        public static IEnumerable<TItem> WhereNotNull<TItem>(this IEnumerable<TItem?> source)
+            where TItem : class
+        {
+            Guard.AgainstNull(source, nameof(source));
+
+            foreach (TItem? item in source)
+            {
+                if (item is not null)
+                {
+                    yield return item;
+                }
+            }
+        }
+
+        public static void ForEach<TItem>(this IEnumerable<TItem> source, Action<TItem> action)
+        {
+            Guard.AgainstNull(source, nameof(source));
+            Guard.AgainstNull(action, nameof(action));
+
+            foreach (TItem item in source)
+            {
+                action(item);
             }
         }
 

@@ -17,7 +17,8 @@ Copyright (c) Eric Heasley
 | `PennForgeTech.Core.Events` | `IEventPublisher`, `IEventListener<TEvent>` and `InMemoryEventBus`. Listeners receive events of the exact published type. |
 | `PennForgeTech.Core.Exceptions` | `PennForgeTechException`, the base type for the library's own exceptions. |
 | `PennForgeTech.Core.Security` | `PasswordHasher` (PBKDF2), `HashHelper` (SHA-256) and `SecureRandom`. |
-| `PennForgeTech.Core.Utilities` | String and sequence helpers and `Base64UrlEncoder`. |
+| `PennForgeTech.Core.Extensions` | Extension methods for strings, sequences, dictionaries, `DateTimeOffset`, enums and nullable values (`ToResult`). |
+| `PennForgeTech.Core.Utilities` | `Base64UrlEncoder`. |
 | `PennForgeTech.Core.Validation` | `Validator<TInstance>` rules, `ValidationResult`, `ValidationException`, and conversion to `Result`. |
 | `PennForgeTech.Core.Serialization` | `ISerializer` and `JsonTextSerializer` (System.Text.Json, camelCase, string enums). |
 

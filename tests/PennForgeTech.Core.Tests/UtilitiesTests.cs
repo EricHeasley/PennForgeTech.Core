@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using PennForgeTech.Core.Extensions;
 using PennForgeTech.Core.Utilities;
 using Xunit;
 
