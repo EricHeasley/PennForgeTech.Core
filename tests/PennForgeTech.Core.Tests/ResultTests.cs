@@ -2,74 +2,75 @@ using System;
 using PennForgeTech.Core.Results;
 using Xunit;
 
-namespace PennForgeTech.Core.Tests;
-
-public sealed class ResultTests
+namespace PennForgeTech.Core.Tests
 {
-    private static readonly ResultError NotFoundError = new ResultError("User.NotFound", "The user does not exist.");
-
-    [Fact]
-    public void Success_HasNoError()
+    public sealed class ResultTests
     {
-        Result result = Result.Success();
+        private static readonly ResultError NotFoundError = new ResultError("User.NotFound", "The user does not exist.");
 
-        Assert.True(result.IsSuccess);
-        Assert.False(result.IsFailure);
-        Assert.Throws<InvalidOperationException>(() => result.Error);
-    }
+        [Fact]
+        public void Success_HasNoError()
+        {
+            Result result = Result.Success();
 
-    [Fact]
-    public void Failure_CarriesTheError()
-    {
-        Result result = Result.Failure(NotFoundError);
+            Assert.True(result.IsSuccess);
+            Assert.False(result.IsFailure);
+            Assert.Throws<InvalidOperationException>(() => result.Error);
+        }
 
-        Assert.True(result.IsFailure);
-        Assert.Equal(NotFoundError, result.Error);
-    }
+        [Fact]
+        public void Failure_CarriesTheError()
+        {
+            Result result = Result.Failure(NotFoundError);
 
-    [Fact]
-    public void FailureWithValue_ThrowsWhenValueIsRead()
-    {
-        Result<int> result = Result.Failure<int>(NotFoundError);
+            Assert.True(result.IsFailure);
+            Assert.Equal(NotFoundError, result.Error);
+        }
 
-        Assert.Throws<InvalidOperationException>(() => result.Value);
-    }
+        [Fact]
+        public void FailureWithValue_ThrowsWhenValueIsRead()
+        {
+            Result<int> result = Result.Failure<int>(NotFoundError);
 
-    [Fact]
-    public void Map_TransformsValueOnSuccess()
-    {
-        Result<int> result = Result.Success(2);
+            Assert.Throws<InvalidOperationException>(() => result.Value);
+        }
 
-        Result<string> mapped = result.Map(number => $"number {number}");
+        [Fact]
+        public void Map_TransformsValueOnSuccess()
+        {
+            Result<int> result = Result.Success(2);
 
-        Assert.Equal("number 2", mapped.Value);
-    }
+            Result<string> mapped = result.Map(number => $"number {number}");
 
-    [Fact]
-    public void Map_PassesFailureThrough()
-    {
-        Result<int> result = Result.Failure<int>(NotFoundError);
+            Assert.Equal("number 2", mapped.Value);
+        }
 
-        Result<string> mapped = result.Map(number => $"number {number}");
+        [Fact]
+        public void Map_PassesFailureThrough()
+        {
+            Result<int> result = Result.Failure<int>(NotFoundError);
 
-        Assert.Equal(NotFoundError, mapped.Error);
-    }
+            Result<string> mapped = result.Map(number => $"number {number}");
 
-    [Fact]
-    public void Then_ChainsOnSuccess()
-    {
-        Result<int> result = Result.Success(2);
+            Assert.Equal(NotFoundError, mapped.Error);
+        }
 
-        Result<int> chained = result.Then(number => Result.Success(number * 10));
+        [Fact]
+        public void Then_ChainsOnSuccess()
+        {
+            Result<int> result = Result.Success(2);
 
-        Assert.Equal(20, chained.Value);
-    }
+            Result<int> chained = result.Then(number => Result.Success(number * 10));
 
-    [Fact]
-    public void ValueOr_ReturnsFallbackOnFailure()
-    {
-        Result<int> result = Result.Failure<int>(NotFoundError);
+            Assert.Equal(20, chained.Value);
+        }
 
-        Assert.Equal(7, result.ValueOr(7));
+        [Fact]
+        public void ValueOr_ReturnsFallbackOnFailure()
+        {
+            Result<int> result = Result.Failure<int>(NotFoundError);
+
+            Assert.Equal(7, result.ValueOr(7));
+        }
     }
 }

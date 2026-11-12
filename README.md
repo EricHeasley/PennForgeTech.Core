@@ -20,8 +20,8 @@ Enforced by `.editorconfig` and by building with warnings as errors:
 
 - No `var`; types are always written out.
 - No expression-bodied members or other shorthand; braces and block bodies everywhere.
+- Namespaces use braces (block-scoped), and comments are kept to a minimum.
 - Instance members are always accessed with `this.`.
-- Every public type and member has an XML documentation comment.
 
 ## Build and test
 

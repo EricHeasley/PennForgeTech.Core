@@ -3,7 +3,6 @@
     <RootNamespace>PennForgeTech.Core</RootNamespace>
     <AssemblyName>PennForgeTech.Core</AssemblyName>
     <Description>Shared foundation library for PennForgeTech projects.</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Version>0.1.0</Version>
   </PropertyGroup>
 </Project>

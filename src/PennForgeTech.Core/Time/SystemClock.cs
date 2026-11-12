@@ -1,13 +1,12 @@
 using System;
 
-namespace PennForgeTech.Core.Time;
-
-/// <summary>An <see cref="IClock"/> that reports the real system time.</summary>
-public sealed class SystemClock : IClock
+namespace PennForgeTech.Core.Time
 {
-    /// <inheritdoc />
-    public DateTimeOffset UtcNow
+    public sealed class SystemClock : IClock
     {
-        get { return DateTimeOffset.UtcNow; }
+        public DateTimeOffset UtcNow
+        {
+            get { return DateTimeOffset.UtcNow; }
+        }
     }
 }

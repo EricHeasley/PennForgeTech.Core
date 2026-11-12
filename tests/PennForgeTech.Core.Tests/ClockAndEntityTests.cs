@@ -3,50 +3,51 @@ using PennForgeTech.Core.Domain;
 using PennForgeTech.Core.Time;
 using Xunit;
 
-namespace PennForgeTech.Core.Tests;
-
-public sealed class ClockAndEntityTests
+namespace PennForgeTech.Core.Tests
 {
-    private sealed class Customer : Entity<Guid>
+    public sealed class ClockAndEntityTests
     {
-        public Customer(Guid id)
-            : base(id)
+        private sealed class Customer : Entity<Guid>
         {
+            public Customer(Guid id)
+                : base(id)
+            {
+            }
         }
-    }
 
-    private sealed class Supplier : Entity<Guid>
-    {
-        public Supplier(Guid id)
-            : base(id)
+        private sealed class Supplier : Entity<Guid>
         {
+            public Supplier(Guid id)
+                : base(id)
+            {
+            }
         }
-    }
 
-    [Fact]
-    public void FixedClock_AdvancesByTheGivenAmount()
-    {
-        DateTimeOffset start = new DateTimeOffset(2026, 1, 1, 0, 0, 0, TimeSpan.Zero);
-        FixedClock clock = new FixedClock(start);
+        [Fact]
+        public void FixedClock_AdvancesByTheGivenAmount()
+        {
+            DateTimeOffset start = new DateTimeOffset(2026, 1, 1, 0, 0, 0, TimeSpan.Zero);
+            FixedClock clock = new FixedClock(start);
 
-        clock.Advance(TimeSpan.FromHours(2));
+            clock.Advance(TimeSpan.FromHours(2));
 
-        Assert.Equal(start.AddHours(2), clock.UtcNow);
-    }
+            Assert.Equal(start.AddHours(2), clock.UtcNow);
+        }
 
-    [Fact]
-    public void Entities_WithSameTypeAndId_AreEqual()
-    {
-        Guid id = Guid.NewGuid();
+        [Fact]
+        public void Entities_WithSameTypeAndId_AreEqual()
+        {
+            Guid id = Guid.NewGuid();
 
-        Assert.Equal(new Customer(id), new Customer(id));
-    }
+            Assert.Equal(new Customer(id), new Customer(id));
+        }
 
-    [Fact]
-    public void Entities_WithSameIdButDifferentType_AreNotEqual()
-    {
-        Guid id = Guid.NewGuid();
+        [Fact]
+        public void Entities_WithSameIdButDifferentType_AreNotEqual()
+        {
+            Guid id = Guid.NewGuid();
 
-        Assert.NotEqual<object>(new Customer(id), new Supplier(id));
+            Assert.NotEqual<object>(new Customer(id), new Supplier(id));
+        }
     }
 }
