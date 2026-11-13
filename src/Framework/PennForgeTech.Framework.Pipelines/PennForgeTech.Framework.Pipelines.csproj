@@ -4,6 +4,7 @@
     <Description>Ordered behaviors around request handlers.</Description>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Abstractions/PennForgeTech.Core.Abstractions.csproj" />
     <ProjectReference Include="../../Framework/PennForgeTech.Framework.Application/PennForgeTech.Framework.Application.csproj" />
     <ProjectReference Include="../../Foundation/PennForgeTech.Core.Results/PennForgeTech.Core.Results.csproj" />
     <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />

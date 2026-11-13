@@ -55,6 +55,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{50988402
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PennForgeTech.Core.Tests", "tests\PennForgeTech.Core.Tests\PennForgeTech.Core.Tests.csproj", "{FF8973F8-FE7C-4B6F-A427-3C2638141138}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PennForgeTech.Core.Logging", "src\Extensions\PennForgeTech.Core.Logging\PennForgeTech.Core.Logging.csproj", "{ABFF9645-9359-4304-AB40-1D19AE68A36C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PennForgeTech.Core.Logging.MicrosoftExtensions", "src\Infrastructure\PennForgeTech.Core.Logging.MicrosoftExtensions\PennForgeTech.Core.Logging.MicrosoftExtensions.csproj", "{0DC44478-DA77-438D-8111-FF72ADEDACB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -140,6 +144,14 @@ Global
 		{FF8973F8-FE7C-4B6F-A427-3C2638141138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8973F8-FE7C-4B6F-A427-3C2638141138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8973F8-FE7C-4B6F-A427-3C2638141138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABFF9645-9359-4304-AB40-1D19AE68A36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFF9645-9359-4304-AB40-1D19AE68A36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFF9645-9359-4304-AB40-1D19AE68A36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFF9645-9359-4304-AB40-1D19AE68A36C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC44478-DA77-438D-8111-FF72ADEDACB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC44478-DA77-438D-8111-FF72ADEDACB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC44478-DA77-438D-8111-FF72ADEDACB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC44478-DA77-438D-8111-FF72ADEDACB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{21C1B2E2-73FF-4A8E-9F1D-A4C4F317E03B} = {B9C131EF-18E6-4B09-A476-25A6C508F59F}
@@ -166,5 +178,7 @@ Global
 		{482F201B-281A-40EC-838D-82AEBD7E049F} = {B9C131EF-18E6-4B09-A476-25A6C508F59F}
 		{35DFC08B-AB49-4BDE-8F57-948DCF6E37EE} = {482F201B-281A-40EC-838D-82AEBD7E049F}
 		{FF8973F8-FE7C-4B6F-A427-3C2638141138} = {50988402-B7C8-45D4-A349-61D46D9A3BA1}
+		{ABFF9645-9359-4304-AB40-1D19AE68A36C} = {888519B4-139F-4C25-AD79-2B54512D0B89}
+		{0DC44478-DA77-438D-8111-FF72ADEDACB8} = {7B8D2EE3-5BE3-4F4F-A24A-C4CFB6F0A5FF}
 	EndGlobalSection
 EndGlobal

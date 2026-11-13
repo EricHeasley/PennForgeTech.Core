@@ -31,5 +31,7 @@
     <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Http\PennForgeTech.Core.Http.csproj" />
     <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Serialization.Json\PennForgeTech.Core.Serialization.Json.csproj" />
     <ProjectReference Include="..\..\src\Observability\PennForgeTech.Core.Diagnostics\PennForgeTech.Core.Diagnostics.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Logging\PennForgeTech.Core.Logging.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Logging.MicrosoftExtensions\PennForgeTech.Core.Logging.MicrosoftExtensions.csproj" />
   </ItemGroup>
 </Project>

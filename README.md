@@ -9,9 +9,10 @@ Copyright (c) Eric Heasley
 | Group | Package | Contents |
 | --- | --- | --- |
 | Foundation | `PennForgeTech.Core.Primitives` | `Guard`, `PageRequest`, `PagedResult<TItem>`, `Entity<TId>`, `Base64UrlEncoder` |
-| Foundation | `PennForgeTech.Core.Abstractions` | `IClock`, `SystemClock`, `FixedClock`, `ICacheService`, `IEventPublisher`, `IEventListener<TEvent>`, `ISerializer` |
+| Foundation | `PennForgeTech.Core.Abstractions` | `IClock`, `SystemClock`, `FixedClock`, `IAppLogger`, `LogLevel`, `ICacheService`, `IEventPublisher`, `IEventListener<TEvent>`, `ISerializer` |
 | Foundation | `PennForgeTech.Core.Results` | `Result`, `Result<TValue>`, `ResultError` |
 | Foundation | `PennForgeTech.Core.Exceptions` | `PennForgeException` (carries an error code) |
+| Extensions | `PennForgeTech.Core.Logging` | `ConsoleAppLogger`, `InMemoryAppLogger`, `NullAppLogger` |
 | Extensions | `PennForgeTech.Core.Caching` | `MemoryCacheService` with per-entry expiry |
 | Extensions | `PennForgeTech.Core.Events` | `InMemoryEventBus` |
 | Extensions | `PennForgeTech.Core.Security` | `PasswordHasher` (PBKDF2), `HashHelper` (SHA-256), `SecureRandom` |
@@ -20,11 +21,12 @@ Copyright (c) Eric Heasley
 | Extensions | `PennForgeTech.Core.Configuration` | `RequiredSetting.Require` |
 | Extensions | `PennForgeTech.Core.Resilience` | `RetryExecutor` |
 | Infrastructure | `PennForgeTech.Core.Serialization.Json` | `JsonTextSerializer` |
+| Infrastructure | `PennForgeTech.Core.Logging.MicrosoftExtensions` | `MicrosoftAppLogger`, an adapter over `Microsoft.Extensions.Logging` |
 | Infrastructure | `PennForgeTech.Core.Http` | `IHttpService`, `HttpService` |
 | Infrastructure | `PennForgeTech.Core.Data.SqlServer` | `SqlExecutor` |
 | Observability | `PennForgeTech.Core.Diagnostics` | `PennForgeDiagnostics.ActivitySource` |
 | Framework | `PennForgeTech.Framework.Application` | `IRequestHandler<TRequest, TResponse>` |
-| Framework | `PennForgeTech.Framework.Pipelines` | `Pipeline<TRequest, TResponse>`, `IPipelineBehavior<TRequest, TResponse>` |
+| Framework | `PennForgeTech.Framework.Pipelines` | `Pipeline<TRequest, TResponse>`, `IPipelineBehavior<TRequest, TResponse>`, `LoggingBehavior<TRequest, TResponse>` |
 | Framework | `PennForgeTech.Framework.WebApi` | `ToHttpResult` for `Result` and `Result<TValue>` |
 
 Namespaces match package names.
