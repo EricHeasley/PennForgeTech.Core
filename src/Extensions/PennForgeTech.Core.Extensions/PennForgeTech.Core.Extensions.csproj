@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Extensions</PackageId>
+    <Description>Extension methods for strings, sequences, dictionaries, dates, enums and nullable values.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Results/PennForgeTech.Core.Results.csproj" />
+  </ItemGroup>
+</Project>

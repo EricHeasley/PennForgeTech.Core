@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Serialization.Json</PackageId>
+    <Description>JSON serializer built on System.Text.Json.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Abstractions/PennForgeTech.Core.Abstractions.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Exceptions/PennForgeTech.Core.Exceptions.csproj" />
+  </ItemGroup>
+</Project>

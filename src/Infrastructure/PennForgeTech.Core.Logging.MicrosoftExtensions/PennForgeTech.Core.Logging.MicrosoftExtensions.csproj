@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Logging.MicrosoftExtensions</PackageId>
+    <Description>Adapter that sends PennForgeTech log messages to Microsoft.Extensions.Logging.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Abstractions/PennForgeTech.Core.Abstractions.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+  </ItemGroup>
+</Project>

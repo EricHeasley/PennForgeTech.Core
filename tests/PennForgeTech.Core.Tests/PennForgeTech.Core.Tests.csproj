@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.10" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Caching\PennForgeTech.Core.Caching.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Configuration\PennForgeTech.Core.Configuration.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Events\PennForgeTech.Core.Events.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Extensions\PennForgeTech.Core.Extensions.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Resilience\PennForgeTech.Core.Resilience.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Security\PennForgeTech.Core.Security.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Validation\PennForgeTech.Core.Validation.csproj" />
+    <ProjectReference Include="..\..\src\Foundation\PennForgeTech.Core.Abstractions\PennForgeTech.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\Foundation\PennForgeTech.Core.Exceptions\PennForgeTech.Core.Exceptions.csproj" />
+    <ProjectReference Include="..\..\src\Foundation\PennForgeTech.Core.Primitives\PennForgeTech.Core.Primitives.csproj" />
+    <ProjectReference Include="..\..\src\Foundation\PennForgeTech.Core.Results\PennForgeTech.Core.Results.csproj" />
+    <ProjectReference Include="..\..\src\Framework\PennForgeTech.Framework.Application\PennForgeTech.Framework.Application.csproj" />
+    <ProjectReference Include="..\..\src\Framework\PennForgeTech.Framework.Pipelines\PennForgeTech.Framework.Pipelines.csproj" />
+    <ProjectReference Include="..\..\src\Framework\PennForgeTech.Framework.WebApi\PennForgeTech.Framework.WebApi.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Data.SqlServer\PennForgeTech.Core.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Http\PennForgeTech.Core.Http.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Serialization.Json\PennForgeTech.Core.Serialization.Json.csproj" />
+    <ProjectReference Include="..\..\src\Observability\PennForgeTech.Core.Diagnostics\PennForgeTech.Core.Diagnostics.csproj" />
+    <ProjectReference Include="..\..\src\Extensions\PennForgeTech.Core.Logging\PennForgeTech.Core.Logging.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\PennForgeTech.Core.Logging.MicrosoftExtensions\PennForgeTech.Core.Logging.MicrosoftExtensions.csproj" />
+  </ItemGroup>
+</Project>

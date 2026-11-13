@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Http</PackageId>
+    <Description>JSON GET and POST over an injected HttpClient, returning results.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Results/PennForgeTech.Core.Results.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+  </ItemGroup>
+</Project>

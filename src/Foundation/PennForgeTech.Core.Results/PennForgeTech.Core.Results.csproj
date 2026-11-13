@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Results</PackageId>
+    <Description>Success and failure results for expected failures.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Diagnostics</PackageId>
+    <Description>Shared ActivitySource for tracing.</Description>
+  </PropertyGroup>
+</Project>

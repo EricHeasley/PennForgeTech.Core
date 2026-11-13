@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Abstractions</PackageId>
+    <Description>Stable contracts for time, logging, caching, events and serialization.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+  </ItemGroup>
+</Project>
