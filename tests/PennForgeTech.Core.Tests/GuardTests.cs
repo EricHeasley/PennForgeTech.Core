@@ -1,5 +1,5 @@
 using System;
-using PennForgeTech.Core.Guards;
+using PennForgeTech.Core.Primitives;
 using Xunit;
 
 namespace PennForgeTech.Core.Tests

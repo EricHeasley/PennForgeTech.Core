@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Exceptions</PackageId>
+    <Description>Base exception type that carries an error code.</Description>
+  </PropertyGroup>
+</Project>

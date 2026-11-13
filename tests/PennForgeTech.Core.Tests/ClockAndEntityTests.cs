@@ -1,6 +1,6 @@
 using System;
-using PennForgeTech.Core.Domain;
-using PennForgeTech.Core.Time;
+using PennForgeTech.Core.Abstractions;
+using PennForgeTech.Core.Primitives;
 using Xunit;
 
 namespace PennForgeTech.Core.Tests

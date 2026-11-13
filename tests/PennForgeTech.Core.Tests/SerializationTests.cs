@@ -1,4 +1,4 @@
-using PennForgeTech.Core.Serialization;
+using PennForgeTech.Core.Serialization.Json;
 using Xunit;
 
 namespace PennForgeTech.Core.Tests

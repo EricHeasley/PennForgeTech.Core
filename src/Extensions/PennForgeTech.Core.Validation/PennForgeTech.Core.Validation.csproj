@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Validation</PackageId>
+    <Description>Rule-based validation with results and exceptions.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Primitives/PennForgeTech.Core.Primitives.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Results/PennForgeTech.Core.Results.csproj" />
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Exceptions/PennForgeTech.Core.Exceptions.csproj" />
+  </ItemGroup>
+</Project>

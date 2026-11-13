@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using PennForgeTech.Core.Extensions;
-using PennForgeTech.Core.Utilities;
+using PennForgeTech.Core.Primitives;
 using Xunit;
 
 namespace PennForgeTech.Core.Tests

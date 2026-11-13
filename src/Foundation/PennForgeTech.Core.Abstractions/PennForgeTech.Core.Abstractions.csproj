@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Abstractions</PackageId>
+    <Description>Stable contracts for time, caching, events and serialization.</Description>
+  </PropertyGroup>
+</Project>

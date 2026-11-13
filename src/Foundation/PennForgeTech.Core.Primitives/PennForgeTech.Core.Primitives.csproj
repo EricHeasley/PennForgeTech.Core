@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Core.Primitives</PackageId>
+    <Description>Guards, paging, entity base type and encoding helpers.</Description>
+  </PropertyGroup>
+</Project>

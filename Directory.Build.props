@@ -9,6 +9,9 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <Authors>Eric Heasley</Authors>
     <Company>PennForgeTech</Company>
+    <Version>0.1.0</Version>
+    <RepositoryUrl>https://github.com/EricHeasley/PennForgeTech.Core</RepositoryUrl>
+    <IsPackable>true</IsPackable>
     <Copyright>Copyright (c) Eric Heasley</Copyright>
   </PropertyGroup>
 </Project>

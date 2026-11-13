@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using PennForgeTech.Core.Paging;
+using PennForgeTech.Core.Primitives;
 using Xunit;
 
 namespace PennForgeTech.Core.Tests

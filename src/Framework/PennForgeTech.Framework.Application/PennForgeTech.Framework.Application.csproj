@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>PennForgeTech.Framework.Application</PackageId>
+    <Description>Request handler contract.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Foundation/PennForgeTech.Core.Results/PennForgeTech.Core.Results.csproj" />
+  </ItemGroup>
+</Project>
